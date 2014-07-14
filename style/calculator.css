@@ -1,0 +1,231 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  line-height: 100%;
+  overflow: hidden;
+  font-size: 10px;
+  font-weight: normal;
+  background-color: #2b2b2b;
+}
+div.panel{
+  display:inline-block;
+  width:7.9rem;
+  height:5.9rem;
+}
+.x-row{
+  width: 32rem;
+  height: 6rem;
+   background: -moz-linear-gradient(black, #2b2b2b); /* For Firefox 3.6 to 15 */
+  display: block;
+}
+
+.y-row{
+  display: inline-block;
+  background: -moz-linear-gradient(black, #1b1b1b); /* For Firefox 3.6 to 15 */
+  width: 8rem;
+  height: 24rem;
+  vertical-align: top;
+  margin-left: -3px;
+}
+
+.row-block {
+  display: inline-block;
+  background-color: #272727;
+  vertical-align: top;
+  width: 24rem;
+  height: 24rem;
+}
+
+.row{
+  display: block;
+  width: 100%;
+}
+
+input {
+  /* text nodes in the source code affect the layout */
+  margin-right: -2px;
+  background: transparent;
+  border: 0;
+  vertical-align: top;
+  border-radius: 0;
+}
+
+input[disabled] {
+  pointer-events: none;
+}
+
+.row-block .row input{
+  font-size: 3rem;
+  font-weight: 200;
+  color: #e7e7e7;
+  border-top: .1rem solid #191919;
+  border-right: .1rem solid #191919;
+}
+
+input.small {
+  display: inline-block;
+  color:white;
+  width: 7.9rem;
+  height: 5.9rem;
+}
+
+.y-row input{
+  display: block;
+  width: 100%;
+  font-size:3rem;
+  border-top: .1rem solid #191919;
+}
+
+.double-y{
+  width: 7.9rem;
+  height: 12rem;
+  display: block;
+}
+
+input[value="Clear"]{
+  color: white;
+  font-size: 2.3rem;
+  font-weight: 500;
+  border-right: .1rem solid #191919;
+}
+
+input::-moz-focus-inner {
+  padding: 0;
+  margin: 0;
+  border: 0
+}
+
+/* Result Display */
+#display {
+  color: white;
+  background-color: #4b4b4b;
+  height: 15.6rem;
+  line-height: 15.6rem;
+  width: 32rem;
+  position: relative;
+}
+#display div {
+  transform-origin: right center;
+  position: absolute;
+  right: 3rem;
+  height: 100%;
+  line-height: 15.6rem;
+  font-weight: 200;
+  font-size: 8.2rem;
+
+}
+
+
+
+@media (min-width: 321px), (min-height: 481px){
+  #display {
+    width: 100%;
+    height: calc(100% / 3);
+  }
+
+  #display div {
+    height: 100%;
+    vertical-align: middle;
+
+  }
+
+  #panel{
+    width: 100%;
+    height: calc((100% / 3) * 2);
+  }
+
+  .x-row{
+    width: 100%;
+    height: calc(100% / 5);
+  }
+
+  .row-block {
+    width: calc((100% / 4) * 3);
+    height: calc((100% / 5) * 4);
+  }
+
+  .y-row{
+    width: calc(100% / 4);
+    height: calc((100% / 3) * 3);
+  }
+
+  .x-row input.small {
+    width: calc(100% / 4);
+    height: 100%;
+
+  }
+
+  .y-row input.small {
+    width: 100%;
+    height: calc(100% / 5 );
+  }
+
+  .y-row .double-y{
+    width: 100%;
+    height: calc(100% / 2);
+  }
+
+  .row{
+    height: calc(100% / 4)
+  }
+
+  .row input.small {
+    width: calc((100% / 3) - 0.1rem);
+    height: calc(100% - 0.1rem);
+  }
+
+  .x-row .double-x{
+    width: calc((100% / 4 * 3) - 0.1rem);
+    height: 100%;
+    line-height: 100%;
+  }
+
+  .row .double-x{
+    width: calc(((100% / 3) * 2) - 0.1rem);
+    height: 100%;
+    line-height: 100%;
+  }
+}
+
+input:active,
+input.active,
+.active {
+  background-color: #0f0f0f;
+}
+
+@-moz-keyframes fadeInUp {
+
+  0%{
+    top:0;
+  }
+  69%{
+    top:-150px;
+    color #034fca;
+  }
+  70%{
+    top:100px;
+    color #034fca;
+  }
+  100%{
+    top:0;
+    color:#034fca;
+  }
+
+}
+
+.start {
+  animation: fadeInUp;
+  -moz-animation-name: fadeInUp; /* Firefox */
+  -moz-animation-play-state:inherit;
+  -moz-animation-fill-mode:forwards;
+  -moz-animation-duration: 1s;
+}
+
+.initcolor{
+  color:white;
+}
+
+.mbutton, .bbutton{
+  display:none;
+}
